@@ -3,13 +3,22 @@ package model;
 public class Cafe {
 
     private double gramosCafe, mlAgua, tamanio;
+    private String codCafe;
     private IngredienteOpcional ingredientes;
 
-    public Cafe(double gramosCafe, double mlAgua, double tamanio, IngredienteOpcional ingredientes) {
+    public Cafe(String codCafe, double gramosCafe, double mlAgua, double tamanio, IngredienteOpcional ingredientes) {
+        this.codCafe = codCafe;
         this.gramosCafe = gramosCafe;
         this.mlAgua = mlAgua;
         this.tamanio = tamanio;
         this.ingredientes = ingredientes;
+    }
+
+    public String getCodCafe() {
+        return codCafe;
+    }
+    public void setCodCafe(String codCafe) {
+        this.codCafe = codCafe;
     }
 
     public double getGramosCafe() {

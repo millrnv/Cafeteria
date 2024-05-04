@@ -5,15 +5,24 @@ import java.util.List;
 
 public class Cafeteria {
     private List<Cafe> cafes;
-    private String nombre, direccion;
+    private String nombre, direccion, codCafeteria;
     private RedSocial redSocial;
 
-    public Cafeteria(String nombre, String direccion, RedSocial redSocial) {
+    public Cafeteria(String codCafeteria, String nombre, String direccion, RedSocial redSocial) {
+        this.codCafeteria = codCafeteria;
         this.nombre = nombre;
         this.direccion = direccion;
         this.redSocial = redSocial;
         this.cafes = new ArrayList<Cafe>();
 
+    }
+
+    public String getCodCafeteria() {
+        return codCafeteria;
+    }
+
+    public void setCodCafeteria(String codCafeteria) {
+        this.codCafeteria = codCafeteria;
     }
 
     public List<Cafe> getCafes() {
